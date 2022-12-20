@@ -1,0 +1,54 @@
+.card__repos {
+  margin: 0;
+  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #858585;
+}
+.btn-star {
+  margin: 0;
+  padding: 5px 20px;
+  background: rgba(48, 54, 61, 0.808);
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #858585;
+}
+.card__repos--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.card__footer {
+  margin: 10px 0px;
+  color: #cacaca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.badges {
+  margin: 0;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: purple;
+  border-radius: 50%;
+}
+.repos-title{
+  color: #cacaca;
+}
+
+@media screen and (max-width:400px) {
+  .card__repos{
+    padding: 0;
+  }
+}

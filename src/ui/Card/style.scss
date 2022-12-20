@@ -1,0 +1,71 @@
+.card-repos {
+  margin: 0;
+  padding: 20px;
+  width: 440px;
+  display: flex;
+  flex-direction:column ;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 5px;
+  border: 1px solid #8b949e;;
+}
+.card-top {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgb(88, 166, 255);
+  }
+}
+.read{
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.public{
+    margin: 0;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #878d94;
+    font-size: 12px;
+    color: #8b949e;
+    font-weight: 300;
+    border-radius:20px;
+}
+
+.card-bottom {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  span {
+    color: #8b949e;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.dot{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: purple;
+}
+.card-bottom{
+  color: #878d94;
+}
+
+@media screen and (max-width:1295px) {
+  .card-repos{
+    width: 100%;
+  }
+}
