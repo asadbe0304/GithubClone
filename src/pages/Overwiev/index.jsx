@@ -5,14 +5,20 @@ import { useEffect, useState } from "react";
 import { API } from "./../../api/api";
 import "./style.scss";
 const index = () => {
-  // const [data, setData] = useState([]);
-  // const [repos, setRepos] = useState([]);
+  const [data, setData] = useState([]);
+  const [name, setName] = useState([]);
+  useEffect(() => {
+    API.getRepos().then((result) => {
+      setData(result.data);
+      if (result.data) {
+        result.data.forEach((el) => {
+          name.push(el.name);
+          setName(name);
+        });
+      }
+    });
+  }, []);
 
-  // useEffect(() => {
-  //   API.getMy().then((result) => {
-  //     setData(result.data);
-  //   });
-  // }, []);
   return (
     <>
       <div className="overview">
@@ -31,14 +37,16 @@ const index = () => {
                       return <Card repos={el} key={el.id} />;
                     })} */}
                     {
-                      // repos.length
-
+                      // repos.lengt
                     }
-                <Card/>                
-                <Card/>                
-                <Card/>                
-                <Card/>                
-                <Card/>                
+                    {
+                      data.length > 0 ?(
+                        data.slice(15, 21).map((e)=>{
+                          return <Card data={e} key={e.id}/>
+                        })
+                      ): <div class="lds-ripple"><div></div><div></div></div>
+                    }
+                {/* <Card/>                                 */}
               </div>
             </div>
           </div>

@@ -5,14 +5,14 @@ import {API} from "./../../api/api"
 
 const index = () => {
 
-  const [data, setData]=useState("")
+  const [data, setData]=useState([])
 
   useEffect(()=>{
     API.getMy().then((res)=>setData(res.data))
   }, [])
   
   // console.log(data);
-  const {avatar_url, login, blog,followers_url}= data
+  const {avatar_url, login, blog,followers, following}= data
 
   return (
     <>
@@ -29,11 +29,11 @@ const index = () => {
           <h3 className="job__title">Frontend developer</h3>
           <div className="follow">
             <a className="follow__link" href="#link">
-              <span className="count">0</span>
+              <span className="count">{followers}</span>
               followers
             </a>
             <a className="follow__link" href="#link">
-              <span className="count">0</span>
+              <span className="count">{following}</span>
               following
             </a>
           </div>

@@ -2,8 +2,23 @@ import React from "react";
 import Profile from "./../../ui/Profile/index";
 import Cards from "./../../ui/ReposCard/index";
 import { BiCaretDown, BiBookBookmark } from "react-icons/bi";
+import { API } from "../../api/api";
+import { useEffect, useState } from "react";
 import "./style.scss";
 const index = () => {
+  const [data, setData] = useState([]);
+  const [name, setName] = useState([]);
+  useEffect(() => {
+    API.getRepos().then((result) => {
+      setData(result.data);
+      if (result.data) {
+        result.data.forEach((el) => {
+          name.push(el.name);
+          setName(name);
+        });
+      }
+    });
+  }, []);
   return (
     <>
       <div className="repositories">
@@ -34,9 +49,12 @@ const index = () => {
                   </button>
                 </div>
               </div>
-              <Cards />
-              <Cards />
-              <Cards />
+              {/* <Cards /> */}
+              {data.length > 0
+                ? data.map((e) => {
+                    return <Cards data={e} key={e.id} />;
+                  })
+                : <div class="lds-ripple"><div></div><div></div></div>}
             </div>
           </div>
         </div>

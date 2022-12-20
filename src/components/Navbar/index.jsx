@@ -5,10 +5,22 @@ import { MdOutlineChromeReaderMode } from "react-icons/md";
 import { AiOutlineProject, AiOutlineStar } from "react-icons/ai";
 import { FiPackage } from "react-icons/fi";
 import { useEffect, useState } from "react";
+import { API } from "../../api/api";
 import "./style.scss";
 
 const index = () => {
   // const stickyRef = useRef();
+
+  const [data, setData]=useState([])
+
+  useEffect(()=>{
+    API.getMy().then((res)=>setData(res.data))
+  }, [])
+  
+  // console.log(data);
+  const {avatar_url, login, blog,public_repos}= data
+
+
   const [sticky, setSticky] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -44,7 +56,7 @@ const index = () => {
                   >
                     <RiGitRepositoryLine />
                     Repositories
-                    <span className="total">30</span>
+                    <span className="total">{public_repos}</span>
                   </NavLink>
                 </li>
                 <li className="nav__item">

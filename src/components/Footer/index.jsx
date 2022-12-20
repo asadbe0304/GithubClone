@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss"
-import logo from "./../../assets/Github.png";
+import Logo from "./../../assets/Github.png";
 
 const index = () => {
   return (
@@ -9,7 +9,7 @@ const index = () => {
         <div className="container">
           <div className="footer">
             <div className="footer__logo">
-              <img src={logo} alt="footer logo" className="footer__logo--img" />
+              <img src={Logo} alt="footer logo" className="footer__logo--img" />
               <h3 className="footer__title">&copy: 2022 Github, inc,</h3>
             </div>
             <ul className="footer__list">
