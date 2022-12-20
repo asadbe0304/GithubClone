@@ -51,4 +51,11 @@
   .card__repos{
     padding: 0;
   }
+  .repos-title{
+    font-size: 12px;
+  }
+  .card__repos--top{
+  flex-wrap: wrap;
+  gap: 10px;
+  }
 }

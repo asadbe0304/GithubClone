@@ -42,6 +42,32 @@
   outline: none;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.result{
+  position: absolute;
+  top: 45px;
+  left: 160px;
+  width: 540px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #1c2633;
+}
+.show{
+  position: absolute;
+  top: 45px;
+  left: 160px;
+  width: 540px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #1c2633;
+  display: flex;
+}
 .search__bar::placeholder {
   color: #d6d6d6;
   font-weight: 200;
@@ -117,6 +143,7 @@
   height: 32px;
   display: none;
 }
+
 @media screen and (max-width: 960px) {
   .mobile__logo {
     width: 100%;
@@ -167,3 +194,4 @@
     margin: 20px 0px;
   }
 }
+

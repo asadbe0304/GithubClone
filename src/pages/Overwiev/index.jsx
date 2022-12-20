@@ -1,13 +1,14 @@
 import React from "react";
 import Profile from "./../../ui/Profile/index";
 import Card from "./../../ui/Card/Card";
+// import {Outlet} from "react-router-dom"
 import { useEffect, useState } from "react";
 import { API } from "./../../api/api";
 import "./style.scss";
 const index = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState([]);
-  useEffect(() => {
+  useEffect((e) => {
     API.getRepos().then((result) => {
       setData(result.data);
       if (result.data) {
@@ -25,7 +26,7 @@ const index = () => {
         <div className="container">
           <div className="overview__inner">
             <div className="overview__left">
-              <Profile />
+              <Profile/>
             </div>
             <div className="overview__right">
               <div className="top">
@@ -44,9 +45,9 @@ const index = () => {
                         data.slice(15, 21).map((e)=>{
                           return <Card data={e} key={e.id}/>
                         })
-                      ): <div class="lds-ripple"><div></div><div></div></div>
+                      ): <div className="lds-ripple"><div></div><div></div></div>
                     }
-                {/* <Card/>                                 */}
+                {/* <Card/>   */}
               </div>
             </div>
           </div>
