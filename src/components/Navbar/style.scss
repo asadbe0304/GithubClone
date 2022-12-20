@@ -1,6 +1,6 @@
 .navbar{
     margin: 0;
-    padding: 30px 0 10px 0;
+    padding: 30px 0 0px 0;
     background: transparent;
     border-bottom: 1px solid #21262D;
     overflow-x: scroll;
@@ -27,6 +27,7 @@
     background:#0D1117;
     z-index: 22;
     width: 100%;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .active {
@@ -37,13 +38,15 @@
     gap: 10px;
     font-size: 14px;
     font-weight: 500;
-    border-radius: 5px;
+    border-bottom: 2px solid #ee790c;
     color: #cccaca;
+    text-decoration: none;
     transition: all .3s ease-in-out;
 }
 
-.item{
+.nav__item .item{
     padding: 5px;
+    // padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,8 +55,10 @@
     font-weight: 500;
     border-radius: 5px;
     color: #cccaca;
-    text-decoration: none;
     transition: all .3s ease-in-out;
+}
+.item{
+    text-decoration: none;
 }
 
 .item:hover{

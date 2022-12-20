@@ -11,7 +11,6 @@ const index = () => {
   useEffect(()=>{
   API.getRepos().then((repos)=> setRepos(repos.reposit))
   }, [])
-console.log(reposit);
 // const {name} = reposit
   return (
     <>

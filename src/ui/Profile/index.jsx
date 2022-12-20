@@ -13,11 +13,12 @@ const index = () => {
   
   // console.log(data);
   const {avatar_url, login, blog,followers_url}= data
+
   return (
     <>
       <div className="card__avatar">
         <img
-          src={"https://avatars.githubusercontent.com/u/108288103?v=4"}
+          src={avatar_url}
           className="card__img"
           alt="images"
         />
@@ -28,11 +29,11 @@ const index = () => {
           <h3 className="job__title">Frontend developer</h3>
           <div className="follow">
             <a className="follow__link" href="#link">
-              <span className="count">{"0"}</span>
+              <span className="count">0</span>
               followers
             </a>
             <a className="follow__link" href="#link">
-              <span className="count">11</span>
+              <span className="count">0</span>
               following
             </a>
           </div>
