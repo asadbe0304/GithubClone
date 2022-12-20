@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss"
-import Logo from "./../../assets/Github.png";
+import Logo from "./../../assets/png/Github.png";
 
 const index = () => {
   return (

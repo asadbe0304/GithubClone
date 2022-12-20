@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Github from "./../../assets/github.png";
+import Github from "./../../assets/png/github.png";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import {TiThMenuOutline} from "react-icons/ti"
