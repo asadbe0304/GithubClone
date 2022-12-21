@@ -6,6 +6,7 @@ import Over from "./pages/Overwiev/index";
 import Repos from "./pages/Repos/index";
 import Follow from "./pages/Following";
 import Followers from "./pages/Followers";
+import Repository from "./pages/Repository/index"
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Over />} />
         <Route path="/repos" element={<Repos />} />
+        <Route path="/repos:names" element={<Repository />} />
         <Route path="/follower" element={<Followers />} />
         <Route path="/follow" element={<Follow />} />
       </Routes>
