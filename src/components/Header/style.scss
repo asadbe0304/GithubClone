@@ -32,6 +32,12 @@
     list-style: none;
   }
 }
+.header_layout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
 .icon {
   color: #d6d6d6;
 }
