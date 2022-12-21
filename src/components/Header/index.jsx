@@ -1,7 +1,7 @@
 import Github from "./../../assets/png/github.png";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
-import { TiThMenuOutline } from "react-icons/ti";
+import { FiMenu } from "react-icons/fi";
 import { RiGitRepositoryLine } from "react-icons/ri";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import { API } from "../../api/api";
@@ -48,7 +48,7 @@ const index = () => {
         <div className="container">
           <div className="header">
             <div className="mobile__logo">
-              <TiThMenuOutline
+              <FiMenu
                 className="mobile"
                 onClick={() => setMenu((el) => !el)}
               />

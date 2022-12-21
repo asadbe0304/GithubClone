@@ -20,12 +20,11 @@ const index = () => {
     });
   }, []);
 
-  console.log(data);
   return (
     <>
       <div className="site-follow">
         <div className="container">
-          <div className="follow">
+          <div className="follow__inner">
             <div className="follow__left">
               <Profile />
             </div>
