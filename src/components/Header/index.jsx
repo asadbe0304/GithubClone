@@ -45,7 +45,7 @@ const index = () => {
                 <img className="logo__img" src={Github} alt="github logo" />
               </a>
             </div>
-            <div className={`header__inner ${menu ? "header__inner" : "menu"}`}>
+            <div className={`header__inner ${menu ? "menu" : ""}`}>
               {/* <img src={TiThMenuOutline} alt="images" /> */}
               <input
                 type="search"
@@ -86,7 +86,7 @@ const index = () => {
                 </li>
               </ul>
             </div>
-            <div className={`account__bar ${menu ? "" : "menu"}`}>
+            <div className={`account__bar ${menu ? "menu" : ""}`}>
               <IoMdNotificationsOutline className="notif" />
               <span className="badge"></span>
               {/* <img className="notif" src={IoMdNotificationsOutline} alt="" /> */}
