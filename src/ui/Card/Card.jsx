@@ -4,7 +4,7 @@ import { RiGitRepositoryLine } from "react-icons/ri";
 import { GrDrag } from "react-icons/gr";
 import { API } from "./../../api/api";
 import { useState, useEffect } from "react";
-const index = ({data:{name, id, language}}) => {
+const index = ({data:{name, id, language, visibility}}) => {
 
   return (
     <>
@@ -14,11 +14,11 @@ const index = ({data:{name, id, language}}) => {
             <h3 className="repos-title">
               <RiGitRepositoryLine className="read" />
               {name}
-              <span className="public">public</span>
+              <span className="public">{visibility}</span>
             </h3>
           </div>
           <div>
-            <GrDrag />
+            <GrDrag className="drag"/>
           </div>
         </div>
         <div className="card-bottom">

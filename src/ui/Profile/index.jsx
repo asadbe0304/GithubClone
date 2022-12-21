@@ -36,7 +36,9 @@ const index = () => {
             <ul className="card__list">
               <li className="card__item">developer</li>
               <li className="card__item">Uz Andijon</li>
-              <li className="card__item">{blog}</li>
+              <li className="card__item">
+                <a className="card__item" href={blog}>{blog}</a>
+              </li>
             </ul>
           </div>
         </div>
