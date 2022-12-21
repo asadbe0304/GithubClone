@@ -8,55 +8,57 @@ import "./style.scss";
 import React, { useState, useEffect } from "react";
 
 const index = () => {
-  const [data, setData] = useState([]);
-  const [search, setSearch] = useState([])
-  useEffect(() => {
-    API.getAll().then((result) => {
-      setData(result.data);
-      if(result.data){
-        // result.data
-          search.push(result.data)
-          setSearch(search)
-      }
-    });
-  }, []);
+  // const [data, setData] = useState([]);
+  // const [search, setSearch] = useState([])
+  //   useEffect(() => {
+  //     API.getAll().then((result) => {
+  //       setData(result.data);
+  //       if(result.data){
+  //         // result.data
+  //           search.push(result.data)
+  //           setSearch(search)
+  //       }
+  //     });
+  //   }, []);
 
-const searchByName=(text)=>{
-  API.getAll(text).then((res)=>{
-    setData(res.data)
-  })
-}
-console.log(data);
+  // const searchByName=(text)=>{
+  //   API.getAll(text).then((res)=>{
+  //     setData(res.data)
+  //   })
+  // }
+  // console.log(data);
 
+  const [menu, setMenu] = useState(false);
   const [flex, setFlex] = useState(false);
-  const res = () => {
-    console.log(flex);
-  };
+
   return (
     <>
       <header className="site-header">
         <div className="container">
           <div className="header">
             <div className="mobile__logo">
-              <TiThMenuOutline className="mobile" />
+              <TiThMenuOutline
+                className="mobile"
+                onClick={() => setMenu((el) => !el)}
+              />
               <a className="logo__link" href="./">
                 <img className="logo__img" src={Github} alt="github logo" />
               </a>
             </div>
-            <div className="header__inner">
+            <div className={`header__inner ${menu ? "header__inner" : "menu"}`}>
               {/* <img src={TiThMenuOutline} alt="images" /> */}
               <input
                 type="search"
-                onChange={(e)=>{
-// setSearch(e.target.value)
-                  searchByName(e.target.value)
+                onChange={(e) => {
+                  // setSearch(e.target.value)
+                  searchByName(e.target.value);
                 }}
                 className="search__bar"
                 onFocus={() => setFlex(true)}
                 placeholder="Search or jump to.."
               />
               <div className={`${flex ? "show" : "result"}`}></div>
-              <ul className="header__list">
+              <ul className={`header__list `}>
                 <li className="header__list--item">
                   <a className="list__item--link" href="#link">
                     Pull requests
@@ -84,7 +86,7 @@ console.log(data);
                 </li>
               </ul>
             </div>
-            <div className="account__bar">
+            <div className={`account__bar ${menu ? "" : "menu"}`}>
               <IoMdNotificationsOutline className="notif" />
               <span className="badge"></span>
               {/* <img className="notif" src={IoMdNotificationsOutline} alt="" /> */}

@@ -18,6 +18,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  transition: all .4s cubic-bezier(0.02,-0.01, 0.26, 2.42);
   .logo__link {
     text-decoration: none;
   }
@@ -30,6 +31,9 @@
     gap: 15px;
     list-style: none;
   }
+}
+.menu{
+  display: flex!important;
 }
 .search__bar {
   margin: 0;
@@ -158,7 +162,8 @@
     width: 100%;
     flex-direction: column;
     input{
-      margin: 10px 0px;
+      margin: 10px 0px 0 0 ;
+      padding: 10px 20px;
       width: 100%;
     }
     input:focus{
