@@ -11,7 +11,7 @@ const index = () => {
   }, []);
 
   // console.log(data);
-  const { avatar_url, login, blog, followers, following } = data;
+  const { avatar_url, login, blog, followers, following, location } = data;
 
   return (
     <>
@@ -20,7 +20,7 @@ const index = () => {
         <div className="card__body">
           <h2 className="user__title">Asadbek Axmadqulov</h2>
           <p className="nick__name">{login}</p>
-          <button className="btn">Edit Prfile</button>
+          <button className="btn">Edit Profile</button>
           <h3 className="job__title">Frontend developer</h3>
           <div className="follow">
             <NavLink className="follow__link" to="/foll">
@@ -35,7 +35,7 @@ const index = () => {
           <div className="card__footer">
             <ul className="card__list">
               <li className="card__item">developer</li>
-              <li className="card__item">Uz Andijon</li>
+              <li className="card__item">{location}</li>
               <li className="card__item">
                 <a className="card__item" href={blog}>{blog}</a>
               </li>
@@ -47,4 +47,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default React.memo(index);

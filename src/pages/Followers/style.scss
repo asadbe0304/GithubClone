@@ -1,0 +1,16 @@
+.followers{
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.followers__right{
+    margin: 20px 0 0 0;
+    padding: 0 30px;
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
