@@ -11,14 +11,24 @@
 .btn-star {
   margin: 0;
   padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(48, 54, 61, 0.808);
   font-size: 14px;
   line-height: 20px;
-  vertical-align: middle;
   font-weight: 500;
   text-align: center;
   border-radius: 10px;
   border: 1px solid #858585;
+  font-size: 14px;
+  color: #cacaca;
+}
+.star{
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  color: #fff;
 }
 .card__repos--top {
   display: flex;
@@ -33,6 +43,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  color: rgb(139, 148, 158);
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
 }
 .badges {
   margin: 0;
@@ -44,7 +58,12 @@
   border-radius: 50%;
 }
 .repos-title{
-  color: #cacaca;
+  color: rgb(88, 166, 255);
+}
+.time{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 200;
 }
 
 @media screen and (max-width:400px) {

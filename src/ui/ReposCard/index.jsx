@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import { RiGitRepositoryLine } from "react-icons/ri";
 import { CiStar } from "react-icons/ci";
 
-const index = ({ data: { name, id, language } }) => {
+const index = ({ data: { name, id, language, updated_at, pushed_at } }) => {
   return (
     <>
       <div className="card__repos">
@@ -16,13 +16,14 @@ const index = ({ data: { name, id, language } }) => {
             </h3>
           </Link>
           <button className="btn-star">
-            <CiStar />
+            <CiStar className="star"/>
             Star
           </button>
         </div>
         <div className="card__footer">
           <span className="badges"></span>
           {language}
+          <p className="time">Update {updated_at}</p>
         </div>
       </div>
     </>

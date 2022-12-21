@@ -50,13 +50,20 @@ const index = () => {
                 </div>
               </div>
               {/* <Cards /> */}
-              {data.length > 0
-                ? data.map((e) => {
-                    return <>
-                    <Cards data={e} key={e.id} />;
+              {data.length > 0 ? (
+                data.map((e) => {
+                  return (
+                    <>
+                      <Cards data={e} key={e.id} />;
                     </>
-                  })
-                : <div className="lds-ripple"><div></div><div></div></div>}
+                  );
+                })
+              ) : (
+                <div className="lds-ripple">
+                  <div></div>
+                  <div></div>
+                </div>
+              )}
             </div>
           </div>
         </div>

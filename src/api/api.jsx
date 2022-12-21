@@ -8,6 +8,6 @@ export const API = {
     getMy: async ()=> axios.get(`${URl}`),
     getRepos: async ()=> axios.get(`${URl}/repos`),
 
-    getAll: async (user_name)=> axios.get(`${BaseUrl}/user_name`)
+    getAll: async ()=> axios.get(`${BaseUrl}`)
     // getItem: async (title) => axios.get(`${URl}/name/${title}`),/
 }

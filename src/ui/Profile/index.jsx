@@ -20,7 +20,7 @@ const index = () => {
         <div className="card__body">
           <h2 className="user__title">Asadbek Axmadqulov</h2>
           <p className="nick__name">{login}</p>
-          <button className="btn">Follow</button>
+          <button className="btn">Edit Prfile</button>
           <h3 className="job__title">Frontend developer</h3>
           <div className="follow">
             <NavLink className="follow__link" to="/foll">
@@ -34,8 +34,8 @@ const index = () => {
           </div>
           <div className="card__footer">
             <ul className="card__list">
-              <li className="card__item">BarbosaDEv</li>
-              <li className="card__item">U.S.A</li>
+              <li className="card__item">developer</li>
+              <li className="card__item">Uz Andijon</li>
               <li className="card__item">{blog}</li>
             </ul>
           </div>

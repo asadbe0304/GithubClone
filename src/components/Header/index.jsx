@@ -2,10 +2,11 @@ import Github from "./../../assets/png/github.png";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { TiThMenuOutline } from "react-icons/ti";
+import { RiGitRepositoryLine } from "react-icons/ri";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import { API } from "../../api/api";
 import "./style.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const index = () => {
   // const [data, setData] = useState([]);
@@ -29,7 +30,17 @@ const index = () => {
   // console.log(data);
 
   const [menu, setMenu] = useState(false);
-  const [flex, setFlex] = useState(false);
+  // const [flex, setFlex] = useState(false);
+  const flex = useRef();
+
+  const setFlex = () => {
+    let result = document.querySelector(".result");
+    if (result.classList.contains("show")) {
+      flex.current.classList.remove("show");
+    } else {
+      flex.current.classList.add("show");
+    }
+  };
 
   return (
     <>
@@ -44,20 +55,37 @@ const index = () => {
               <a className="logo__link" href="./">
                 <img className="logo__img" src={Github} alt="github logo" />
               </a>
-            </div>
-            <div className={`header__inner ${menu ? "menu" : ""}`}>
-              {/* <img src={TiThMenuOutline} alt="images" /> */}
               <input
-                type="search"
-                onChange={(e) => {
-                  // setSearch(e.target.value)
-                  searchByName(e.target.value);
-                }}
-                className="search__bar"
-                onFocus={() => setFlex(true)}
+                // type="search"
+                // onChange={(e) => {
+                //   // setSearch(e.target.value)
+                //   // searchByName(e.target.value);
+                // }}
+                className="mobile-search"
+                onClick={() => setFlex()}
                 placeholder="Search or jump to.."
               />
-              <div className={`${flex ? "show" : "result"}`}></div>
+            </div>
+            <div className={`header__inner ${menu ? "menu" : ""}`}>
+            <input
+                // type="search"
+                // onChange={(e) => {
+                //   // setSearch(e.target.value)
+                //   // searchByName(e.target.value);
+                // }}
+                className="search__bar"
+                onClick={() => setFlex()}
+                placeholder="Search or jump to.."
+              />
+              {/* <img src={TiThMenuOutline} alt="images" /> */}
+              <div className="result" ref={flex}>
+                <ul className="list_result">
+                  <li className="result_item">
+                    <RiGitRepositoryLine className="icon" />
+                    <a href="#link">asadbe0304</a>
+                  </li>
+                </ul>
+              </div>
               <ul className={`header__list `}>
                 <li className="header__list--item">
                   <a className="list__item--link" href="#link">
@@ -92,8 +120,8 @@ const index = () => {
               {/* <img className="notif" src={IoMdNotificationsOutline} alt="" /> */}
               <div className="plus">
                 {/* <img src={AiOutlinePlus} alt="" /> */}
-                <AiOutlinePlus className="plusout"/>
-                <MdOutlineArrowDropDownCircle className="arrow"/>
+                <AiOutlinePlus className="plusout" />
+                <MdOutlineArrowDropDownCircle className="arrow" />
                 {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
               <div className="avatar__box">
@@ -103,7 +131,7 @@ const index = () => {
                   className="avatar"
                 />
                 {/* <RiAdminFill className="avatar" /> */}
-                <MdOutlineArrowDropDownCircle className="arrow"/>
+                <MdOutlineArrowDropDownCircle className="arrow" />
                 {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
             </div>
