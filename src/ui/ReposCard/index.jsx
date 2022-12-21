@@ -1,20 +1,20 @@
 import React from "react";
 import "./style.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { RiGitRepositoryLine } from "react-icons/ri";
 import { CiStar } from "react-icons/ci";
 
-const index = ({ data: { name, id, language, updated_at, pushed_at, visibility } }) => {
+const index = ({ data: { name, id, language, updated_at, pushed_at, visibility, html_url } }) => {
   return (
     <>
       <div className="card__repos">
         <div className="card__repos--top">
-          <Link to={`/repos/${name}`}>
+          <a href={html_url} target="blank">
             <h3 className="repos-title">
               {name}
               <span className="public">{visibility}</span>
             </h3>
-          </Link>
+          </a>
           <button className="btn-star">
             <CiStar className="star"/>
             Star
