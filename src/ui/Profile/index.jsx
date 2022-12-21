@@ -23,7 +23,7 @@ const index = () => {
           <button className="btn">Follow</button>
           <h3 className="job__title">Frontend developer</h3>
           <div className="follow">
-            <NavLink className="follow__link" to="/followers">
+            <NavLink className="follow__link" to="/foll">
               <span className="count">{followers}</span>
               followers
             </NavLink>
