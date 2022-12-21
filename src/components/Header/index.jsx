@@ -47,38 +47,23 @@ const index = () => {
       <header className="site-header">
         <div className="container">
           <div className="header">
-            
             <div className="mobile__logo">
-              <FiMenu
-                className="mobile"
-                onClick={() => setMenu((el) => !el)}
-              />
+              <FiMenu className="mobile" onClick={() => setMenu((el) => !el)} />
               <a className="logo__link" href="./">
                 <img className="logo__img" src={Github} alt="github logo" />
               </a>
               <input
-                // type="search"
-                // onChange={(e) => {
-                //   // setSearch(e.target.value)
-                //   // searchByName(e.target.value);
-                // }}
                 className="mobile-search"
                 onClick={() => setFlex()}
                 placeholder="Search or jump to.."
               />
             </div>
             <div className={`header__inner ${menu ? "menu" : ""}`}>
-            <input
-                // type="search"
-                // onChange={(e) => {
-                //   // setSearch(e.target.value)
-                //   // searchByName(e.target.value);
-                // }}
+              <input
                 className="search__bar"
                 onClick={() => setFlex()}
                 placeholder="Search or jump to.."
               />
-              {/* <img src={TiThMenuOutline} alt="images" /> */}
               <div className="result" ref={flex}>
                 <ul className="list_result">
                   <li className="result_item">
@@ -118,12 +103,9 @@ const index = () => {
             <div className={`account__bar ${menu ? "menu" : ""}`}>
               <IoMdNotificationsOutline className="notif" />
               <span className="badge"></span>
-              {/* <img className="notif" src={IoMdNotificationsOutline} alt="" /> */}
               <div className="plus">
-                {/* <img src={AiOutlinePlus} alt="" /> */}
                 <AiOutlinePlus className="plusout" />
                 <MdOutlineArrowDropDownCircle className="arrow" />
-                {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
               <div className="avatar__box">
                 <img
@@ -131,9 +113,8 @@ const index = () => {
                   alt=""
                   className="avatar"
                 />
-                {/* <RiAdminFill className="avatar" /> */}
+                
                 <MdOutlineArrowDropDownCircle className="arrow" />
-                {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
             </div>
           </div>
