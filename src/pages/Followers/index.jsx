@@ -35,7 +35,7 @@ const index = () => {
                   return <Card key={e.id} data={e} />;
                 })
               ) : (
-                <h2>Not Followers</h2>
+                <h2>You don’t have any followers yet.</h2>
               )}
             </div>
           </div>

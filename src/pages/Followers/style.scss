@@ -1,4 +1,4 @@
-.followers__inner{
+.followers{
     margin: 0;
     padding: 0;
     max-width: 1440px;
@@ -15,7 +15,7 @@
     align-items: flex-start;
 }
 @media screen and (max-width: 790px) {
-    .followers__inner {
+    .followers{
       flex-direction: column;
       align-items: center;
     }

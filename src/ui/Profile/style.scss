@@ -75,14 +75,35 @@
 .card__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   list-style: none;
 }
 .card__item {
-  color: rgb(188, 166, 255);
+  color: #c9d1d9;
   font-size: 14px;
   line-height: 21px;
 }
-
+.blog_link{
+  text-transform: lowercase;
+}
+.fol-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.gps{
+  width: 18px;
+  height: 18px;
+}
+.link-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 // .following__box{
 //   display: flex;
 //   justify-content: space-between;
