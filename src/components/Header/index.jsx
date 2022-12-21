@@ -92,8 +92,8 @@ const index = () => {
               {/* <img className="notif" src={IoMdNotificationsOutline} alt="" /> */}
               <div className="plus">
                 {/* <img src={AiOutlinePlus} alt="" /> */}
-                <AiOutlinePlus />
-                <MdOutlineArrowDropDownCircle />
+                <AiOutlinePlus className="plusout"/>
+                <MdOutlineArrowDropDownCircle className="arrow"/>
                 {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
               <div className="avatar__box">
@@ -103,7 +103,7 @@ const index = () => {
                   className="avatar"
                 />
                 {/* <RiAdminFill className="avatar" /> */}
-                <MdOutlineArrowDropDownCircle />
+                <MdOutlineArrowDropDownCircle className="arrow"/>
                 {/* <img src={MdOutlineArrowDropDownCircle} alt="" /> */}
               </div>
             </div>

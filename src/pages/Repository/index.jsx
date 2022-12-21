@@ -10,13 +10,13 @@ const index = () => {
   useEffect(() => {
     API.getRepos(names).then((res) => setData(res.data[0]));
   }, [names]);
-
-  const {repos__url, public_repos}= data
+  console.log(data);
+  const { name } = data;
   return (
     <>
       <div className="repository">
         <ul className="repos__list">
-          <li className="repos__item">Repos</li>
+          <li className="repos__item">{name}</li>
         </ul>
       </div>
     </>
