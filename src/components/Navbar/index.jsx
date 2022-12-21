@@ -29,7 +29,7 @@ const index = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 50
+      windowHeight > 20
         ? setSticky("sticky")
         : setSticky("");
     }
