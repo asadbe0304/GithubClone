@@ -9,25 +9,25 @@ import "./style.scss";
 import React, { useState, useEffect, useRef } from "react";
 
 const index = () => {
-  // const [data, setData] = useState([]);
-  // const [search, setSearch] = useState([])
-  //   useEffect(() => {
-  //     API.getAll().then((result) => {
-  //       setData(result.data);
-  //       if(result.data){
-  //         // result.data
-  //           search.push(result.data)
-  //           setSearch(search)
-  //       }
-  //     });
-  //   }, []);
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState([]);
+  useEffect(() => {
+    API.getAll().then((result) => {
+      setData(result.data);
+      if (result.data) {
+        // result.data
+        search.push(result.data);
+        setSearch(search[0]);
+      }
+    });
+  }, []);
 
-  // const searchByName=(text)=>{
-  //   API.getAll(text).then((res)=>{
-  //     setData(res.data)
-  //   })
-  // }
-  // console.log(data);
+  // const searchByName = (login) => {
+  //   API.getAll(login).then((res) => {
+  //     setData(res.data);
+  //   });
+  // };
+  console.log(data);
 
   const [menu, setMenu] = useState(false);
   // const [flex, setFlex] = useState(false);
@@ -56,6 +56,10 @@ const index = () => {
                 className="mobile-search"
                 onClick={() => setFlex()}
                 placeholder="Search or jump to.."
+                onChange={(e) => {
+                  // searchByName(e.target.value);
+                  setSearch((e.target.value))
+                }}
               />
             </div>
             <div className={`header__inner ${menu ? "menu" : ""}`}>
@@ -63,13 +67,22 @@ const index = () => {
                 className="search__bar"
                 onClick={() => setFlex()}
                 placeholder="Search or jump to.."
+                onChange={(e) => {
+                  setSearch((e.target.value))
+                  // searchByName(e.target.value);
+                }}
               />
               <div className="result" ref={flex}>
                 <ul className="list_result">
-                  <li className="result_item">
-                    <RiGitRepositoryLine className="icon" />
-                    <a href="#link">asadbe0304</a>
-                  </li>
+                  {data.map((el) => {
+                    return (
+                      <li className="result_item">
+                        <RiGitRepositoryLine className="icon" />
+                        <a href="#link">{el.login}</a>
+                      </li>
+                    );
+                  })}
+
                 </ul>
               </div>
               <ul className={`header__list `}>
@@ -113,7 +126,7 @@ const index = () => {
                   alt=""
                   className="avatar"
                 />
-                
+
                 <MdOutlineArrowDropDownCircle className="arrow" />
               </div>
             </div>
